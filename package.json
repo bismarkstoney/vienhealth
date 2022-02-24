@@ -3,9 +3,8 @@
 	"version": "1.0.0",
 	"description": "App for users to register, login and logout",
 	"main": "server.js",
-	"type": "module",
 	"scripts": {
-		"test": "mocha --recursive  --timeout 10000",
+		"test": "mocha --watch --timeout 40000  ",
 		"start": "node server.js",
 		"server": "nodemon server.js",
 		"client": "npm start --prefix client",
@@ -15,13 +14,19 @@
 	"author": "Bismark Obeng",
 	"license": "ISC",
 	"dependencies": {
+		"@types/jest": "^27.4.0",
 		"bcryptjs": "^2.4.3",
 		"concurrently": "^6.4.0",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
 		"express-async-handler": "^1.2.0",
+		"jest": "^27.5.1",
 		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^6.0.13"
+		"mongoose": "^6.0.13",
+		"ts-jest": "^27.1.3"
+	},
+	"jest": {
+		"testEnvironment": "node"
 	},
 	"devDependencies": {
 		"chai": "^4.3.4",
